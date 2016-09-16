@@ -1,0 +1,41 @@
+<table class="schoolTable">
+  <thead>
+    <tr>
+      <th ng-class="{schoolTable: dataView === 'table'}" colspan="2"><span class="title">{{ school.name }}</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Top 10 Program - totalt</th>
+      <th>Antal sökande</th>
+    </tr>
+    <tr ng-repeat="program in school.programs | orderBy:'Total':true | limitTo: 10">
+      <td>{{program.Utbildning}}</td>
+      <td>{{program.Total}}</td>
+    </tr>
+    <tr>
+      <th>Top 10 Program - Första handsval</th>
+      <th>Antal sökande</th>
+    </tr>
+    <tr ng-repeat="program in school.programs | orderBy:'Fh':true | limitTo: 10">
+      <td>{{program.Utbildning}}</td>
+      <td>{{program.Fh}}</td>
+    </tr>
+    <tr>
+      <th>Top 10 Program - Män</th>
+      <th>Antal sökande</th>
+    </tr>
+    <tr ng-repeat="program in school.programs | orderBy:'M_tot':true | limitTo: 10">
+      <td>{{program.Utbildning}}</td>
+      <td>{{program.M_tot}}</td>
+    </tr>
+    <tr>
+      <th>Top 10 Program - Kvinnor</th>
+      <th>Antal sökande</th>
+    </tr>
+    <tr ng-repeat="program in school.programs | orderBy:'K_tot':true | limitTo: 10">
+      <td>{{program.Utbildning}}</td>
+      <td>{{program.K_tot}}</td>
+    </tr>
+  </tbody>
+</table>

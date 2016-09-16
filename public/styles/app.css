@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#container {
+  width: 95%;
+  margin: 16px auto;
+  height: 100%;
+  position: relative;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif; }
+  #container table {
+    display: table;
+    width: 100%;
+    margin-bottom: 32px;
+    background-color: #242e35;
+    border-radius: 0 0 8px 8px; }
+    #container table.schoolTable {
+      border-radius: 0 8px 8px 8px; }
+    #container table > thead th {
+      padding: 16px 8px;
+      background-color: #2e3b44;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #ccdddd;
+      border-radius: 0;
+      text-align: left; }
+      #container table > thead th.schoolTable {
+        border-radius: 0 8px 0 0; }
+      #container table > thead th span {
+        cursor: pointer; }
+    #container table > tbody {
+      padding: 8px 0; }
+      #container table > tbody th {
+        padding: 16px 8px;
+        background-color: #2e3b44;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #ccdddd;
+        text-align: left; }
+      #container table > tbody td {
+        padding: 8px 8px;
+        color: #eeeee7;
+        max-width: 450px; }
+        #container table > tbody td.buffer {
+          padding: 16px 8px 8px 8px; }
+        #container table > tbody td.school {
+          cursor: pointer; }
+          #container table > tbody td.school:hover {
+            background-color: #394853; }
+
+.title {
+  cursor: auto;
+  font-size: 25.6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ccdddd; }
+
+.searchBar {
+  background-color: #4a7b6f;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 32px;
+  border-radius: 8px 8px 0 0; }
+  .searchBar h3, .searchBar input {
+    display: inline-block; }
+  .searchBar h3 {
+    color: #eeeee7;
+    text-transform: uppercase;
+    font-size: 14.4px;
+    vertical-align: sub; }
+  .searchBar input {
+    margin-left: 16px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: #dbe9e6;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 16px;
+    color: #242e35; }
+    .searchBar input:focus {
+      outline: none !important;
+      background-color: #ebf3f1; }
+
+.swapLayout {
+  width: 100%; }
+  .swapLayout .button {
+    background-color: #4a7b6f;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px 32px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .3s; }
+    .swapLayout .button:hover {
+      background-color: #5d9b8c;
+      transition: all .3s; }
+    .swapLayout .button.active {
+      background-color: #2e3b44; }
+    .swapLayout .button h3 {
+      text-transform: uppercase;
+      color: #eeeee7; }
+
+.graphView {
+  background-color: #242e35;
+  height: 650px;
+  border-radius: 0 8px 8px; }
+  .graphView > div {
+    padding: 16px 8px;
+    background-color: #2e3b44;
+    border-radius: 0 8px 0; }
+  .graphView #schoolGraph {
+    width: 600px;
+    margin: 32px auto; }
+
+.dot {
+  fill: rgba(238, 238, 231, 0.4); }
+
+.grid path {
+  opacity: 0; }
+
+.grid line {
+  stroke: rgba(74, 123, 111, 0.1);
+  stroke-width: 2px;
+  stroke-dasharray: 4px 4px; }
+
+.values path, .values line {
+  opacity: 0; }
+
+.values text {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 9.6px;
+  fill: rgba(238, 238, 231, 0.4); }
+
+/*# sourceMappingURL=app.css.map */

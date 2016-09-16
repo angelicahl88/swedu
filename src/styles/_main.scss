@@ -1,0 +1,163 @@
+#container {
+  width: 95%;
+  margin: 16px auto;
+  height: 100%;
+  position: relative;
+  font-family: $reg;
+  & table {
+    display: table;
+    width: 100%;
+    margin-bottom: 32px;
+    background-color: $dBlue;
+    border-radius: 0 0 8px 8px;
+    &.schoolTable {
+      border-radius: 0 8px 8px 8px;
+    }
+    & > thead th {
+      padding: 16px 8px;
+      background-color: lighten($dBlue, 5%);
+      text-transform: uppercase;
+      font-size: $baseSize;
+      color: $lBlue;
+      border-radius: 0;
+      text-align: left;
+      &.schoolTable {
+        border-radius: 0 8px 0 0;
+      }
+      & span {
+        cursor: pointer;
+      }
+    }
+    & > tbody {
+      padding: 8px 0;
+      & th {
+        padding: 16px 8px;
+        background-color: lighten($dBlue, 5%);
+        text-transform: uppercase;
+        font-size: $baseSize;
+        color: $lBlue;
+        text-align: left;
+      }
+      & td {
+        padding: 8px 8px;
+        color: $white;
+        max-width: 450px;
+        &.buffer {
+          padding: 16px 8px 8px 8px;
+        }
+        &.school {
+          cursor: pointer;
+          &:hover {
+            background-color: lighten($dBlue, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+&.title {
+  cursor: auto;
+  font-size: $baseSize * 1.6;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $lBlue;
+}
+
+.searchBar {
+  background-color: $dGreen;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 32px;
+  border-radius: 8px 8px 0 0;
+  & h3, & input {
+    display: inline-block;
+  }
+  & h3 {
+    color: $white;
+    text-transform: uppercase;
+    font-size: $baseSize * 0.9;
+    vertical-align: sub;
+  }
+  & input {
+    margin-left: 16px;
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: lighten($dGreen, 50%);
+    font-family: $reg;
+    font-size: $baseSize;
+    color: $dBlue;
+    &:focus {
+      outline: none !important;
+      background-color: lighten($dGreen, 55%);
+    }
+  }
+}
+
+.swapLayout {
+  width: 100%;
+  & .button {
+    background-color: $dGreen;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px 32px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      background-color: lighten($dGreen,10%);
+      transition: all .3s;
+    }
+    &.active {
+      background-color: lighten($dBlue, 5%);
+    }
+    & h3 {
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
+
+.graphView {
+  background-color: $dBlue;
+  height: 650px;
+  border-radius: 0 8px 8px;
+  & > div {
+    padding: 16px 8px;
+    background-color: lighten($dBlue, 5%);
+    border-radius: 0 8px 0;
+  }
+  & #schoolGraph {
+    width: 600px;
+    margin: 32px auto;
+  }
+}
+
+.dot {
+  fill: rgba($white, 0.4);
+}
+
+.grid {
+  & path {
+    opacity: 0;
+  }
+  & line {
+    stroke: rgba($dGreen, 0.1);
+    stroke-width: 2px;
+    stroke-dasharray: 4px 4px;
+  }
+}
+
+.values {
+  & path, line {
+    opacity: 0;
+  }
+  & text {
+    font-family: $reg;
+    font-size: $baseSize * 0.6;
+    fill: rgba($white, 0.4);
+  }
+}

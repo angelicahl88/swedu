@@ -1,0 +1,33 @@
+{
+  "name": "swedu",
+  "version": "1.0.0",
+  "description": "Displaying application data for the fall term of 2016 for universities in Sweden",
+  "main": "src/app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Education",
+    "utbildning",
+    "sweden",
+    "sverige",
+    "universitet",
+    "hogskola"
+  ],
+  "author": "Angelica Hart Lindh",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "d3": "^4.2.3"
+  }
+}

@@ -1,0 +1,24 @@
+<div ng-controller="statCtrl">
+  <div class="searchBar">
+    <h3>Sök utbildning eller universitet/högskola:</h3>
+    <input ng-model="searchProgram"/>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Universitet/Högskola</th>
+        <th>Utbildning</th>
+        <th>Antal sökande <span ng-click="sort.byType='Total'">**</span></th>
+        <th>Antal 1:a handsval <span ng-click="sort.byType='Fh'">**</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in items | orderBy:sort.byType:sort.desc | filter:searchProgram | limitTo:100">
+        <td ng-click="changeView(this)" class="school">{{item.Skola}}</td>
+        <td>{{item.Utbildning}}</td>
+        <td>{{item.Total}}</td>
+        <td>{{item.Fh}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

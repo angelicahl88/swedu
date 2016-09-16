@@ -1,0 +1,17 @@
+<div ng-switch="dataView" ng-init="dataView='table'">
+  <div class="swapLayout">
+    <div class="button" ng-click="dataView='table'" ng-class="{active: dataView === 'table'}">
+      <h3>Tabell</h3>
+    </div>
+    <div class="button" ng-click="data.updateGraphData(); dataView='graph'" ng-class="{active: dataView === 'graph'}">
+      <h3>Graf</h3>
+    </div>
+    <div class="button" ng-click="changeView()">
+      <h3>Tillbaka</h3>
+    </div>
+  </div>
+  <div class="viewBody">
+    <school-table ng-switch-when="table"></school-table>
+    <school-graph ng-switch-when="graph"></school-graph>
+  </div>
+</div>
