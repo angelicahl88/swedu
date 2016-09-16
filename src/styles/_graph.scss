@@ -1,0 +1,40 @@
+.graphView {
+  background-color: $dBlue;
+  height: 650px;
+  border-radius: 0 8px 8px;
+  & > div {
+    padding: 16px 8px;
+    background-color: lighten($dBlue, 5%);
+    border-radius: 0 8px 0;
+  }
+  & #schoolGraph {
+    width: 600px;
+    margin: 32px auto;
+  }
+}
+
+.dot {
+  fill: rgba($white, 0.4);
+}
+
+.grid {
+  & path {
+    opacity: 0;
+  }
+  & line {
+    stroke: rgba($dGreen, 0.1);
+    stroke-width: 2px;
+    stroke-dasharray: 4px 4px;
+  }
+}
+
+.values {
+  & path, line {
+    opacity: 0;
+  }
+  & text {
+    font-family: $reg;
+    font-size: $baseSize * 0.6;
+    fill: rgba($white, 0.4);
+  }
+}
