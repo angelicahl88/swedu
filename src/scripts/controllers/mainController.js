@@ -23,14 +23,6 @@ controllers.controller('viewCtrl', function($scope, dataFactory) {
     }
   };
 
-  // $scope.data = {
-  //   updateGraphData: function() {
-  //     $scope.watch('school.data', function(newData, oldData) {
-  //
-  //     });
-  //   }
-  // }
-
   var renderSchoolInfo = function(response) {
     $scope.school.programs = response;
   }
