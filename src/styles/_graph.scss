@@ -1,7 +1,8 @@
 .graphView {
   background-color: $dBlue;
-  height: 650px;
+  height: 700px;
   border-radius: 0 8px 8px;
+  position: relative;
   & > div {
     padding: 16px 8px;
     background-color: lighten($dBlue, 5%);
@@ -11,10 +12,37 @@
     width: 600px;
     margin: 32px auto;
   }
+  & #hoverDot {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $dGreen;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  & #xAxisTitle {
+    position: absolute;
+    top: 350px;
+    left: 100px;
+    text-transform: uppercase;
+    font-size: $baseSize * 0.9;
+    color: $steelBlue;
+  }
+  & #yAxisTitle {
+    position: absolute;
+    bottom: 40px;
+    left: 430px;
+    text-transform: uppercase;
+    font-size: $baseSize * 0.9;
+    color: $steelBlue;
+  }
 }
+
 
 .dot {
   fill: rgba($white, 0.4);
+  cursor: pointer;
 }
 
 .grid {
